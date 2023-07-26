@@ -6,7 +6,6 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 3000;
-
 //router user
 app.use("/user", userRouter);
 //router student
@@ -21,7 +20,6 @@ connect()
   .catch((err) => {
     console.error("Unable to connect to the database:", err);
   });
-  
 app.listen(PORT, async () => {
   console.log(`Server is running on port ${PORT}`);
 });
